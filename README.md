@@ -1,7 +1,7 @@
 
 # RCX Arduino Library
 
-Este repositório contém a biblioteca **RCX**, desenvolvida para facilitar o controle de motores e sensores em projetos Arduino com arquitetura semelhante ao LEGO RCX.  
+Este repositório contém a biblioteca **RCX**, desenvolvida para facilitar a aplicação didática no controle de motores e sensores em projetos Arduino com arquitetura semelhante ao LEGO RCX.  
 
 ## 🚀 Instalação Rápida
 
@@ -42,7 +42,21 @@ void loop()
   float sensor3 = rcx.Read_Sensor(3);
 }
 ```
+Por padrão estão sendo usados pinos:
+ - Motor_A_1 `3`
+ - Motor_A_2 `5`
 
+ - Motor_B_1 `6`
+ - Motor_B_2 `9`
+
+ - Motor_C_1 `10`
+ - Motor_C_2 `11`
+
+ - Sensor_1 `4`
+ - Sensor_2 `7`
+ - Sensor_3 `8`
+
+Então faça as ligações no arduino levando isso em consideração.
 ---
 
 ## ⚙️ RCX - Métodos Disponíveis
