@@ -23,18 +23,23 @@ Este repositório contém a biblioteca **RCX**, desenvolvida para facilitar o co
 Inclua a biblioteca RCX no seu sketch:
 
 ```cpp
-#include "arduino.h"
-#include "RCX.h"
+#include <RCX.h>
 
-RCX meuModulo;
+RCX rcx;
 
-void setup() {
-    meuModulo.begin();
-    meuModulo.Spin_Motor('A', 1, 80); // Motor A para frente a 80% de intensidade
+void setup() 
+{
+  rcx.begin();
 }
 
-void loop() {
-    float valor = meuModulo.Read_Sensor(1); // Lê o Sensor 1
+void loop() 
+{
+  rcx.Spin_Motor("A",1,100);
+  rcx.Spin_Motor("B",1,100);
+  rcx.Spin_Motor("C",1,100);
+  float sensor1 = rcx.Read_Sensor(1);
+  float sensor2 = rcx.Read_Sensor(2);
+  float sensor3 = rcx.Read_Sensor(3);
 }
 ```
 
